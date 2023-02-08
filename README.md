@@ -1,5 +1,5 @@
 # ensemble-learning
-
+> The dataset has features of recording of vocal sounds of patients. These are being analysed in reference to presence or absence of a diagnosis of Parkinsons disease.
 Attribute Information:
 * name - ASCII subject name and recording number
 * MDVP:Fo(Hz) - Average vocal fundamental frequency
@@ -39,3 +39,20 @@ data
 8. TrainatleastonestandardEnsemblemodel-Randomforest,Bagging,
 Boosting etc, and note the accuracy 
 9. Compare all the models (minimum 5) and pick the best one among them
+> Results
+> - First the algorithms of Logistic Regression, KNN Classifier, Decision Tree classifier, Support Vector Classifier and Naive Bayes are implemented individually.
+> - Thereafter they are stacked via StackModel with a final classifier of Logistic Regression and Support Vector Classifier.
+> - Random Forests is then implemented as an ensemble technique.
+> - Results are then compared.
+
+| Model | Accuracy | Recall | Precision | F1 Score | AUC |
+| :---: | :------: | :----: | :-------: | :------: | :-: |
+| Logistic Regression | 85 | 97 | 83 | 90 | 77.7 |
+| KNN | 86 | 97 | 85 | 91 | 80.3 |
+| Naive Bayes | 75 | 68 | 93 | 78 | 78.49 |
+| SVM | 80 | 100 | 77 | 87 | 68.4 |
+| Stacking:SVM | 90 | 97 | 89 | 93 | 85.59 |
+| Stacking:LG | 90 | 100 | 87 | 93 | 84.21 |
+| Random Forest | 93 | 100 | 92 | 96 | 83.3 |
+| Random Forest | 95 | 100 | 93 | 91 | 92.11 |
+
